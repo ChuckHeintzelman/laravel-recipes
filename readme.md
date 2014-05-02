@@ -3,7 +3,9 @@
 ## Contents
 
 * Origin Story (and Creative Commons)
-
+* Installing Laravel Recipes
+* How to Edit Existing Recipes
+* How to Create New Recipes
 
 ## Origin Story (and Creative Commons)
 
@@ -19,3 +21,33 @@ Which means you can share, change, adapt laravel-recipes in any way and redistri
 
 [Creative Commons Details](http://creativecommons.org/licenses/by-sa/4.0/)
 
+## Installing Laravel Recipes
+
+Here's a quick start guide:
+
+1. Clone the ChuckHeintzelman/laravel-recipes repository from github
+2. Update `bootstrap/start.php` and set up an environment override
+3. Add `app/config/YOURENV/database.php` and configure it
+4. Run `artisan migrate` to set up the databases
+5. Run `artisan recipe:sync` to sync your database with the `docs`
+6. Point your web browser at `laravel-recipes/public` and enjoy
+
+# How to Edit Existing Recipes
+
+Editing an existing recipe is easy. Just find the recipe in the `docs/recipes` directory tree and make changes there.
+
+**NOTE** Never change **Id** or **Position** in the header of the markdown document containing the recipe.
+
+When finished making the changes first do a:
+
+    artisan recipe:scan
+
+This will tell you if there any problems with the recipe file. Once verified, you can update your local database with:
+
+    artisan recipe:sync
+
+If that works successfully, clear your application's cache (`artisan cache:clear`) and make sure it looks correct on your local install. When it does, create a pull request to get your change merged into the project.
+
+# How to Create New Recipes
+
+TODO

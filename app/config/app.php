@@ -9,7 +9,7 @@ return array(
     'key' => 'ZEKPjMZoixr4CGmf2aBMqzq3g5kWlOYG',
 
     // Where the markdown recipe files are
-    'recipe_path' => app_path() . '/docs',
+    'recipe_path' => base_path() . '/docs',
 
     // Display the disqus comments?
     'disqus_show' => false,

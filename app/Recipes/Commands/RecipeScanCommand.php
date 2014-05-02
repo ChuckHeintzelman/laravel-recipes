@@ -263,7 +263,7 @@ class RecipeScanCommand extends Command {
     protected function checkTags($recipe)
     {
         $text = $recipe->problem().$recipe->solution().$recipe->discussion();
-        $tags = ['bash', 'bash-lines', '/bash', 'php', '/php', 'ruby', '/ruby',
+        $tags = ['bash', 'bash-lines', '/bash', 'php', 'php-lines', '/php', 'ruby', '/ruby',
             'text', '/text', 'tip', '/tip', 'warn', '/warn', 'html',
             'html-lines', '/html'];
         $counts = [];
@@ -275,11 +275,15 @@ class RecipeScanCommand extends Command {
         {
             $error = "Missing or extra {/bash} tag";
         }
+        if ($counts['php'] + $counts['php-lines'] != $counts['/php'])
+        {
+            $error = "Missing or extra {/bash} tag";
+        }
         if ($counts['html'] + $counts['html-lines'] != $counts['/html'])
         {
             $error = "Missing or extra {/html} tag";
         }
-        foreach (['php', 'ruby', 'text', 'tip', 'warn'] as $tag)
+        foreach (['ruby', 'text', 'tip', 'warn'] as $tag)
         {
             if ($counts[$tag] != $counts['/'.$tag])
             {
@@ -330,5 +334,4 @@ class RecipeScanCommand extends Command {
             throw new \Exception("Category '$name' not assigned to a Section");
         }
     }
-
 }
