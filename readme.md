@@ -9,7 +9,7 @@
 
 ## Origin Story (and Creative Commons)
 
-I created laravel-recipes.com with the intention of having a site with hundreds of little "how-tos" explaining every aspect of Laravel. From the beginning tasks to more advanced techniques. It was going to be amazing.
+I created [laravel-recipes.com](http://laravel-recipes.com) with the intention of having a site with hundreds of little "how-tos" explaining every aspect of Laravel. From the beginning tasks to more advanced techniques. It was going to be amazing.
 
 And it was.
 

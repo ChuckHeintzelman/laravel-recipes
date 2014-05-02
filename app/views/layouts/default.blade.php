@@ -93,8 +93,17 @@
       <div class="row">
         <div class="site-info col-md-6">
           <p class="text-muted">
-            Copyright &copy; <a href="http://storychuck.com">Chuck Heintzelman</a>.
-            <small><br><!--CACHETAG--></small>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+              <img alt="Creative Commons License" style="border-width:0"
+              src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+            </a>
+            <br>
+            <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Laravel Recipes</span>
+            by <a xmlns:cc="http://creativecommons.org/ns#" href="http://laravel-recipes.com"
+              property="cc:attributionName" rel="cc:attributionURL">Chuck Heintzelman</a>
+            is licensed under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+            Attribution-ShareAlike 4.0 International License</a>.
           </p>
         </div><!-- .site-info -->
 
@@ -136,6 +145,7 @@
              </a>
            </li>
           </ul>
+          <small style="align:right"><br><!--CACHETAG--></small>
         </div><!-- .site-social -->
       </div>
     </div>

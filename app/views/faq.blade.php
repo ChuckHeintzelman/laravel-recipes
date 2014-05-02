@@ -51,15 +51,15 @@
             <h4 class="panel-title">
               <a class="accordion-toggle collapsed" data-toggle="collapse"
                 data-parent="#accordion-2" href="#accordion-2-1">
-                Isn't there a bunch of content missing?
+                Is this open source?
               </a>
             </h4>
           </div>
           <div id="accordion-2-1" class="panel-collapse collapse">
             <div class="panel-body">
               <p>
-                Yes. This is a work in progress. I hope to be complete
-                sometime before Christmas.
+                Yes. Please contribute. Check out the source at
+                <a href="https://github.com/ChuckHeintzelman/laravel-recipes">github</a>
               </p>
             </div>
           </div>
