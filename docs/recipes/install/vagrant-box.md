@@ -35,8 +35,8 @@ Change into the newly created `vagrant/laravel` directory and create a new file 
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "raring32"
-  config.vm.box_url = "http://goo.gl/y79mW"
+  config.vm.box = "precise64"
+  config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
   config.vm.network :private_network, ip: "192.168.100.100"
 end
 {/ruby}
