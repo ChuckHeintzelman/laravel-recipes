@@ -1,0 +1,39 @@
+{
+	"name": "ChuckHeintzelman/laravel-recipes",
+	"description": "A bunch of little Laravel 'how-tos'.",
+	"license": "Creative Commons Attribution-ShareAlike 4.0 International License",
+	"require": {
+		"laravel/framework": "4.1.*",
+		"dflydev/markdown" : "1.0.*@dev"
+	},
+	"autoload": {
+		"psr-0": {
+			"Recipes": "app/"
+		},
+		"files": [
+			"app/helpers.php"
+		],
+		"classmap": [
+			"app/database/migrations",
+			"app/database/seeds",
+			"app/tests/TestCase.php"
+		]
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-update-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-create-project-cmd": [
+			"php artisan key:generate"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "stable"
+}
