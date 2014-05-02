@@ -50,7 +50,7 @@ $ cd vagrant/laravel
 $ vagrant up
 {/bash}
 
-This can take a while, especially if its the first time you've installed the `raring32` box.
+This can take a while, especially if its the first time you've installed the `precise64` box.
 
 #### Step 4 - Tweak the Box
 
@@ -61,27 +61,27 @@ $ cd vagrant/laravel
 $ vagrant ssh
 {/bash}
 
-After you successfully connect, your prompt will change to `vagrant@raring32-vanilla`. This indicates you are logged into the virtual machine.
+After you successfully connect, your prompt will change to `vagrant@precise64-vanilla`. This indicates you are logged into the virtual machine.
 
 {bash}
-vagrant@raring32-vanilla:~$ echo "export PS1='laravel:\w\$ '" >> .bashrc
-vagrant@raring32-vanilla:~$ ln -s /vagrant/projects
-vagrant@raring32-vanilla:~$ cat << EOF | sudo tee -a /etc/motd.tail
+vagrant@precise64-vanilla:~$ echo "export PS1='laravel:\w\$ '" >> .bashrc
+vagrant@precise64-vanilla:~$ ln -s /vagrant/projects
+vagrant@precise64-vanilla:~$ cat << EOF | sudo tee -a /etc/motd.tail
 
 ***************************************
 
-Welcome to raring32-vanilla Vagrant Box
+Welcome to precise64-vanilla Vagrant Box
 
 For Laravel development
 
 ***************************************
 EOF
-vagrant@raring32-vanilla:~$ exit
+vagrant@precise64-vanilla:~$ exit
 {/bash}
 
 #### Step 5 - Install basic items
 
-Now when you connect you'll receive new welcome message we created in the last step and your prompt will now be `laravel` instead of `vagrant@raring32-vanilla`.
+Now when you connect you'll receive new welcome message we created in the last step and your prompt will now be `laravel` instead of `vagrant@precise64-vanilla`.
 
 {bash}
 $ cd vagrant/laravel
@@ -104,7 +104,7 @@ Step 1
 
 Step 2
 
-: The `Vagrantfile` was created to specify the name of the box (raring32) and the url it can be found at. The first time you install a box Vagrant downloads it, but subsequent installs are much faster.
+: The `Vagrantfile` was created to specify the name of the box (precise64) and the url it can be found at. The first time you install a box Vagrant downloads it, but subsequent installs are much faster.
 
 : The `config.vm.network` line specifies this box will have the IP of 192.168.100.100. You can use any IP address as long as it doesn't conflict with something else in your network. Keep the first two numbers 192 and 168, though.
 
@@ -112,11 +112,11 @@ Step 2
 
 Step 3
 
-: The `vagrant up` command will initialize the virtual machine and bring it up. This step can take a while. Especially since the first time you do it the _raring32_ operating system must be downloaded. Once the machine is configured, it only takes a second or two to bring it up.
+: The `vagrant up` command will initialize the virtual machine and bring it up. This step can take a while. Especially since the first time you do it the _precise64_ operating system must be downloaded. Once the machine is configured, it only takes a second or two to bring it up.
 
 Step 4
 
-: The `echo "export PS1..."` line will make it so the next time we ssh to the virtual machine, it will show a prompt of `vagrant:~$` instead of `vagrant@raring64-vanilla:~$`. If you have multiple Vagrant boxes you should have the prompt mean something special so you always know which box you're on.
+: The `echo "export PS1..."` line will make it so the next time we ssh to the virtual machine, it will show a prompt of `vagrant:~$` instead of `vagrant@precise64-vanilla:~$`. If you have multiple Vagrant boxes you should have the prompt mean something special so you always know which box you're on.
 
 : The `ln -s /vagrant/projects` will create a symbolic link in the home directory of the projects folder created back in Step 1. Any new Laravel projects will be created here and can be edited from the host operating system. Vagrant shares that folder with the host OS. If you edit `~/vagrant/laravel/projects/test.txt` from your host OS, you'll be able to see it within Vagrant as `~/projects/test.txt`.
 
