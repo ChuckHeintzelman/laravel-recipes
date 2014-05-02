@@ -15,7 +15,7 @@ Even though you have VirtualBox and Vagrant installed, you can't get any work do
 {solution}
 Create a Vagrant Box.
 
-For this example we'll create an Ubuntu 13.04 32bit vanilla box. The term _vanilla_ means nothing extra is installed. It is just like a freshly installed machine.
+For this example we'll create an Ubuntu 14.04 64bit vanilla box. The term _vanilla_ means nothing extra is installed. It is just like a freshly installed machine.
 
 #### Step 1 - Create a directory for our box
 
