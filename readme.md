@@ -13,7 +13,7 @@ I created [laravel-recipes.com](http://laravel-recipes.com) with the intention o
 
 And it was.
 
-But I didn't realize how _huge_ an undertaking this would be. I created almost 300 recipes before this realization. After much head-scratching I decided to open this up to the community at large.
+But I didn't realize how _huge_ an undertaking this would be. I created almost 300 recipes before this realization hit me. After much head-scratching I decided to open this up to the community at large.
 
 I struggled to find the perfect license for this. I looked at GPL and others, but since this site not only contains code but also content that could be used in a variety of mediums. I settled on the Creative Commons license.
 
