@@ -7,7 +7,7 @@ Position: 22
 ---
 
 {problem}
-You want a handy referance of all the Blade template commands.
+You want a handy reference of all the Blade template commands.
 {/problem}
 
 {solution}
