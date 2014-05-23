@@ -13,10 +13,10 @@ But you want to retain the directory itself.
 {/problem}
 
 {solution}
-Use the `File::emptyDirectory()` method.
+Use the `File::cleanDirectory()` method.
 
 {php}
-$success = File::deleteDirectory($directory);
+$success = File::cleanDirectory($directory);
 {/php}
 
 The method will return `false` if the directory doesn't exist. Otherwise it returns `true` when complete.
