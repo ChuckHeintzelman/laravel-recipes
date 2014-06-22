@@ -20,7 +20,7 @@
       @endfor
     </ul>
     <p class="more-link text-center">
-      <a href="/cats/{{ $item[0][1] }}" class="btn btn-custom btn-xs">View All</a>
+      <a href="/categories/{{ $item[0][1] }}" class="btn btn-custom btn-xs">View All</a>
     </p>
   </section>
 </div>
