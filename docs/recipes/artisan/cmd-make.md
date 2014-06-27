@@ -93,7 +93,7 @@ class TestCommand extends Command {
 ?>
 {/php}
 
-You would then edit this skeleton, updating the command specific provided, and implementing the `fire()` method.
+You would then edit this skeleton, updating the command specifics provided, and implementing the `fire()` method.
 {/solution}
 
 {discussion}
@@ -105,5 +105,15 @@ Add the following line to your `app/start/artisan.php` file.
 Artisan::add(new TestCommand);
 {/php}
 
-Now the command you created will be available.
+Depending on the structure of your project, you may also have to dump the autoloader.
+
+{bash}
+$ composer dump-autoload
+{/bash}
+
+Now the command you created will be available. Artisan should list your new command in its list of commands.
+
+{bash}
+$ php artisan list
+{/bash}
 {/discussion}
