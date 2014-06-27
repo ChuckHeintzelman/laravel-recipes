@@ -58,7 +58,7 @@ class HomeComposer
         $popular = [];
         foreach ($categories as $id => $category)
         {
-            $build = [[$category['n'], $category['slug'], $category['name']]];
+            $build = [[$category['n'], $id, $category['name']]];
             $recipes = Recipe::whereCategoryId($id)
                 ->orderBy('views', 'desc')->take(3)->lists('title', 'id');
             foreach ($recipes as $recipe_id => $title)
