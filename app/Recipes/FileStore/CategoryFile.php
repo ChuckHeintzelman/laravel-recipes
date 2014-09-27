@@ -21,7 +21,7 @@ class CategoryFile extends MarkdownFile
      */
     public function hasChanged(array $data, $outputter)
     {
-        if ($this->id !== $data['id'])
+        if ($this->id != $data['id'])
         {
             if ($outputter) $outputter->comment("$this->name category's id changed.");
             return true;

@@ -22,7 +22,7 @@ class RecipeFile extends MarkdownFile
     public function hasChanged(array $data, $category_slug, $outputter)
     {
         $file = $this->filename(false);
-        if ($this->id !== $data['id'])
+        if ($this->id != $data['id'])
         {
             if ($outputter) $outputter->comment("Id in $file changed.");
             return true;
@@ -52,7 +52,7 @@ class RecipeFile extends MarkdownFile
             if ($outputter) $outputter->comment("{discussion} in $file changed.");
             return true;
         }
-        if ($this->position !== $data['position'])
+        if ($this->position != $data['position'])
         {
             if ($outputter) $outputter->comment("Position in $file changed.");
             return true;

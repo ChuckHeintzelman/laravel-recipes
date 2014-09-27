@@ -12,7 +12,7 @@ class SectionFile extends MarkdownFile
     public function hasChanged(array $data, array $cat_slugs, $outputter)
     {
         $file = $this->filename(false);
-        if ($this->id !== $data['id'])
+        if ($this->id != $data['id'])
         {
             if ($outputter) $outputter->comment("Id in $file changed.");
             return true;
@@ -27,7 +27,7 @@ class SectionFile extends MarkdownFile
             if ($outputter) $outputter->comment("Description in $file changed.");
             return true;
         }
-        if ($this->position !== $data['position'])
+        if ($this->position != $data['position'])
         {
             if ($outputter) $outputter->comment("Position in $file changed.");
             return true;
