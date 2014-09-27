@@ -16,4 +16,10 @@ class Recipe extends \Eloquent
     {
         return $this->belongsToMany('Topic');
     }
+
+    // work around on touch failure when inserting
+    public function clearTouches()
+    {
+        $this->touches = [];
+    }
 }

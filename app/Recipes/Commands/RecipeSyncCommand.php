@@ -225,7 +225,10 @@ class RecipeSyncCommand extends RecipeScanCommand {
             {
                 $dbrecipe = new Recipe;
                 if ( ! is_null($recipe->id))
+                {
                     $dbrecipe->id = $recipe->id;
+                    $dbrecipe->clearTouches();
+                }
                 $dbrecipe->title = $recipe->title;
                 $dbrecipe->category_id = $category->id;
                 $dbrecipe->problem = $recipe->problem();
