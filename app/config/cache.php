@@ -5,7 +5,7 @@ return array(
     // How long to cache pages
     'page-minutes' => 60,
 
-    'driver' => 'database',
+    'driver' => 'memcached',
     'path' => storage_path().'/cache',
     'connection' => null,
     'table' => 'cache',

@@ -14,10 +14,10 @@ return array(
 
         'mysql' => array(
             'driver'    => 'mysql',
-            'host'      => $_ENV['DB_HOST'],
-            'database'  => 'recipes',
-            'username'  => $_ENV['DB_USERNAME'],
-            'password'  => $_ENV['DB_PASSWORD'],
+            'host'      => isset($_ENV['DB_HOST']) ? $_ENV['DB_HOST'] : null,
+            'database'  => isset($_ENV['DB_NAME']) ? $_ENV['DB_NAME'] : 'recipes',
+            'username'  => isset($_ENV['DB_USERNAME']) ? $_ENV['DB_USERNAME'] : null,
+            'password'  => isset($_ENV['DB_PASSWORD']) ? $_ENV['DB_PASSWORD'] : null,
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
