@@ -3,6 +3,7 @@
 use DB;
 use Recipe;
 use dflydev\markdown\MarkdownExtraParser;
+use Str;
 
 class RecipePresenter extends Presenter
 {
@@ -79,7 +80,7 @@ class RecipePresenter extends Presenter
             ->toArray();
         $numRows = count($rows);
         $last = $rows[$numRows - 1];
-        $this->prevLink = '/recipes/'.$last['id'];
+        $this->prevLink = '/recipes/'.$last['id'].'/'.Str::slug($last['title']);
         $this->prevTitle = $last['title'];
         $rows[] = $rows[0];
         for ($i = 0; $i < $numRows; $i++)
@@ -87,11 +88,11 @@ class RecipePresenter extends Presenter
             if ($this->id == $rows[$i]['id'])
             {
                 $next = $rows[$i + 1];
-                $this->nextLink = '/recipes/'.$next['id'];
+                $this->nextLink = '/recipes/'.$next['id'].'/'.Str::slug($next['title']);
                 $this->nextTitle = $next['title'];
                 break;
             }
-            $this->prevLink = '/recipes/'.$rows[$i]['id'];
+            $this->prevLink = '/recipes/'.$rows[$i]['id'].'/'.Str::slug($rows[$i]['title']);
             $this->prevTitle = $rows[$i]['title'];
         }
     }

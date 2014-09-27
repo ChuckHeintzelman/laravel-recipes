@@ -12,7 +12,7 @@
         <li>
           <i class="fa-li fa fa-cutlery fa-fw text-muted"></i>
           <h3 class="h5">
-            <a href="/recipes/{{ $item[$i][0] }}">
+            <a href="/recipes/{{ $item[$i][0] }}/{{ Str::slug($item[$i][1]) }}">
               {{{ $item[$i][1] }}}
             </a>
           </h3>

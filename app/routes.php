@@ -18,7 +18,7 @@ Route::group(['before' => 'cache_get', 'after' => 'cache_set'], function()
 });
 
 // Recipe pages are cachable, but the controller method handles it
-Route::get('recipes/{recipe}', 'PageController@recipe');
+Route::get('recipes/{recipe}/{slug?}', 'PageController@recipe');
 
 // Search function isn't cachable
 Route::get('search', [

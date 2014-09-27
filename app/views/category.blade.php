@@ -25,7 +25,7 @@
           <li class="">
             <h4>
               <i class="fa-li fa fa-cutlery fa-fw text-muted"></i>
-              <a href="/recipes/{{ $recipe->id }}">
+              <a href="/recipes/{{ $recipe->id }}/{{ Str::slug($recipe->title) }}">
                 {{{ $recipe->title }}}
               </a>
             </h4>

@@ -32,7 +32,7 @@
                 @foreach($info['recipes'] as $recipe_id)
                   <li><small>
                     <i class="fa-li fa fa-cutlery text-warning"></i>
-                    <a href="/recipes/{{ $recipe_id }}">
+                    <a href="/recipes/{{ $recipe_id }}/{{ Str::slug($recipes[$recipe_id]) }}">
                       {{{ $recipes[$recipe_id] }}}
                     </a>
                   </small></li>
