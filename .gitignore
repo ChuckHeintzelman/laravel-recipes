@@ -1,7 +1,5 @@
 /bootstrap/compiled.php
 /vendor
-/app/config/local
-/app/config/production
 composer.phar
 .env.*.php
 .env.php
