@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bfa5bbf3d9b0e87d5575cfd060c3814a",
+    "hash": "b099992c4c5f45b4c50971aea3f36143",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -231,7 +231,7 @@
             "authors": [
                 {
                     "name": "Anthony Ferrara",
-                    "email": "ircmaxell@php.net",
+                    "email": "ircmaxell@ircmaxell.com",
                     "homepage": "http://blog.ircmaxell.com"
                 }
             ],
