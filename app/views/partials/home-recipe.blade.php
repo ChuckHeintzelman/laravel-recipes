@@ -3,7 +3,7 @@
 <li>
   <i class="fa-li fa fa-cutlery fa-fw text-muted"></i>
   <h3 class="h5">
-    <a href="/recipes/{{ $recipe['id'] }}">
+    <a href="/recipes/{{ $recipe['id'] }}/{{ Str::slug($recipe['title']) }}">
       {{{ $recipe['title'] }}}
     </a>
   </h3>
@@ -19,7 +19,7 @@
     </span>
     <span class="category">
       <i class="fa fa-folder-open-o fa-fw"></i>
-      <a href="/categories/{{ $recipe['category_id'] }}">
+      <a href="/categories/{{ $recipe['category_id'] }}">/{{ Str::slug($recipe['title']) }}">
         {{{ $recipe['category_name'] }}}
       </a>
     </span>

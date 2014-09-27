@@ -7,6 +7,8 @@ use Recipe;
 use Recipes\Presenters\RecipePresenter;
 use Topic;
 use View;
+use Str;
+use Redirect;
 
 /**
  * PageController is a skinny controller that simply returns the appropriate
@@ -63,7 +65,7 @@ class PageController extends \Controller
     /**
      * When displaying a recipe, we manually do the cache processing.
      */
-    public function recipe($id)
+    public function recipe($id, $slug = '')
     {
         // Increment view after response
         App::after(function() use($id)
@@ -71,14 +73,23 @@ class PageController extends \Controller
             DB::table('recipes')->whereId($id)->increment('views');
         });
 
+        $recipe = Recipe::findOrFail($id);
+
+        $slugTitle = Str::slug($recipe->title);
+
+        // Enforce title slugs
+        if ($slug != $slugTitle)
+        {
+            return Redirect::to('recipes/'.$id.'/'.$slugTitle, 301);
+        }
+
         // Return if cached
-        $path = 'recipes/'.$id;
+        $path = 'recipes/'.$id.'/'.$slugTitle;
         if (($content = PageCache::get($path)) !== null)
         {
             return $content;
         }
 
-        $recipe = Recipe::findOrFail($id);
         $category = $recipe->category;
         $recipe_id = $recipe->id;
         $recipe_title = json_encode('Laravel Recipes - '.$recipe->title);
