@@ -2,7 +2,8 @@
 return [
 	'connections' => [
 		'mysql' => [
-			'host' => 'localhost',
+			'host'     => 'localhost',
+			'name'     => 'recipes',
 			'username' => 'homestead',
 			'password' => 'secret',
 		],
