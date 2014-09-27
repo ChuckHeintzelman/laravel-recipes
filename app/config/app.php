@@ -2,17 +2,18 @@
 return array(
 
     'debug' => false,
-    'url' => 'http://localhost',
+    'url' => 'http://laravel-recipes.com',
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
     'key' => 'ZEKPjMZoixr4CGmf2aBMqzq3g5kWlOYG',
+    'cipher' => MCRYPT_RIJNDAEL_256,
 
     // Where the markdown recipe files are
     'recipe_path' => base_path() . '/docs',
 
     // Display the disqus comments?
-    'disqus_show' => false,
+    'disqus_show' => true,
 
     // Disqus account
     'disqus_shortname' => 'laravelrecipes',

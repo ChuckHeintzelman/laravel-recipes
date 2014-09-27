@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-    'local' => array('babu'),   // Chuck's dev box
+    'local' => array('homestead'),   // Standard homestead setup
 
 ));
 

@@ -3,7 +3,7 @@
 	"description": "A bunch of little Laravel 'how-tos'.",
 	"license": "Creative Commons Attribution-ShareAlike 4.0 International License",
 	"require": {
-		"laravel/framework": "4.1.*",
+		"laravel/framework": "4.2.*",
 		"dflydev/markdown" : "1.0.*@dev"
 	},
 	"autoload": {
