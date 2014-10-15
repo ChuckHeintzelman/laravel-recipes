@@ -31,7 +31,7 @@ Add your own classes to be preloaded.
 
 If your application has classes that are frequently used, you can add your own classes to the optimization process.
 
-Just edit `app/config/compiled.php` and add the filenames of your own classes in.
+Just edit `app/config/compile.php` and add the filenames of your own classes in.
 
 {php}
 <?php
