@@ -51,7 +51,7 @@ You should see all the untracked files.
 nothing added to commit but untracked files present (use "git add" to track)
 {/text}
 
-Notice the file `composer.lock` is not tracked? You should edit `.gitattributes` and removed the line that has `composer.lock` in it. This way you'll be tracking `composer.lock` too.
+Notice the file `composer.lock` is not tracked? You should edit `.gitignore` and removed the line that has `composer.lock` in it. This way you'll be tracking `composer.lock` too.
 
 {tip}
 When you track `composer.lock` with your source code control system it allows you to do a `composer update` on your development machine and then, later, a `composer install` on your production machine. The `composer install` command will make sure all packages are the correct version as specified in the `composer.lock` file. Thus production uses not only the same packages, but the same versions of the packages as your production machine.
