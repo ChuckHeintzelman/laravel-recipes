@@ -39,7 +39,7 @@ class MyController extends \Controller
 		{
 			$content = $response->getContent();
 			File::put(app_storage().'/logs/last_response', $content);
-		}
+		});
 	}
 }
 {/php}
