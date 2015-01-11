@@ -22,7 +22,7 @@ $ php artisan migrate:reset
 You can use the `--pretend` option to see what would happen without affecting any data.
 
 {php}
-$ php artsian migrate:reset --pretend
+$ php artisan migrate:reset --pretend
 {/php}
 {/solution}
 
