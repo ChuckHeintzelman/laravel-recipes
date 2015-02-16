@@ -30,7 +30,7 @@ try
 {
     $contents = File::get($filename);
 }
-catch (Illuminate\Filesystem\FileNotFoundException)
+catch (Illuminate\Filesystem\FileNotFoundException $exception)
 {
     die("The file doesn't exist");
 }
