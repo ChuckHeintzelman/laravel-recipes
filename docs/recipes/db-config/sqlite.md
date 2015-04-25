@@ -37,7 +37,7 @@ You must have the PHP Driver installed. See [[Installing SQLite]] for setting up
 In the above configuration example, line #7 points to your database. You may want to change this to your `app/storage` directory.
 
 {php}
-'database' => app_path() . '/storage/production.sqlite',
+'database' => storage_path('production.sqlite'),
 {/php}
 
 Or even create a folder within the storage directory.
@@ -49,6 +49,6 @@ $ mkdir app/storage/databases
 Be sure to update your configuration to the new location.
 
 {php}
-'database' => app_path() . '/storage/databases/production.sqlite',
+'database' => storage_path('databases/production.sqlite'),
 {/php}
 {/discussion}
