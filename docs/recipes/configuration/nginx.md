@@ -30,7 +30,7 @@ server {
 
     location / {
         index index.php;
-        try_files $uri $uri/ /index.php?q=$uri&$args;
+        try_files $uri $uri/ /index.php?$query_string;
     }
 
     error_page 404 /index.php;
