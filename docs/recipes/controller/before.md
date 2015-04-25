@@ -53,7 +53,7 @@ class MyController extends \Controller
 			{
 				return "This website doesn't work before 6am";
 			}
-		}
+		});
 	}
 }
 {/php}

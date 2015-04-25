@@ -29,6 +29,7 @@
             </li>
           </ul>
         </li>
+        <li><a href="http://laravelcoding.com">LaravelCoding</a></li>
         <li>
           <a>Laravel.com</a>
           <ul class="dropdown-menu">
