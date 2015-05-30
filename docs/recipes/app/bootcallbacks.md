@@ -18,11 +18,11 @@ Use `App::booting()` or `App::booted()`
 {php}
 App::booted(function($app)
 {
-    // Code to execute right before the app is booted.
+    // Code to execute right after the app is booted.
 });
 App::booting(function($app)
 {
-    // Code to execute right after the app is booted.
+    // Code to execute right before the app is booted.
 })
 {/php}
 {/solution}
